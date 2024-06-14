@@ -328,7 +328,7 @@ input[type=button]:focus {
 }
 @media screen and (max-width: 1024px) {
   .under_fv {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -726,7 +726,7 @@ input[type=button]:focus {
 
 @media screen and (max-width: 1024px) {
   .under_fv {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -1162,22 +1162,96 @@ sp header
   border-bottom: 3px dotted #000;
   font-size: 13px;
   font-weight: 500;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.header_sp #nav_sp.active .menu_wrap .menu-parent .parent span {
+  display: block;
+  color: #333;
+  line-height: 1;
+  position: relative;
+  width: 9px;
+  height: 9px;
+  transform: translateX(25%) rotate(135deg);
+  margin-right: 5px;
+}
+.header_sp #nav_sp.active .menu_wrap .menu-parent .parent span::before, .header_sp #nav_sp.active .menu_wrap .menu-parent .parent span::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  border-radius: 0.1em;
+}
+.header_sp #nav_sp.active .menu_wrap .menu-parent .parent span::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+.header_sp #nav_sp.active .menu_wrap .menu-parent .parent span::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2px;
+}
+.header_sp #nav_sp.active .menu_wrap .menu-parent.active .parent span {
+  transform: rotate(315deg);
+  transition: 0.3s;
 }
 .header_sp #nav_sp.active .menu_wrap .sub-menu {
   display: none;
   top: 35px;
-  width: 290px;
-  padding: 15px 30px 5px 30px;
+  padding: 18px 0 20px;
 }
-.header_sp #nav_sp.active .menu_wrap .sub-menu .wrapper li {
-  color: red;
-  flex-basis: 50%;
+.header_sp #nav_sp.active .menu_wrap .sub-menu .wrapper .links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 15px;
+  gap: 2rem 1.6rem;
+  position: relative;
+  z-index: 2;
+}
+.header_sp #nav_sp.active .menu_wrap .sub-menu .wrapper .links li {
+  width: 47.2222222222%;
+  min-width: 22rem;
+  height: 60px;
+  display: table;
+  gap: 1rem 0;
+  background-color: #fff8f1;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.header_sp #nav_sp.active .menu_wrap .sub-menu .wrapper .links li .arrow_a {
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+.header_sp #nav_sp.active .menu_wrap .sub-menu .wrapper .links_img li {
+  background-size: cover;
+  background-position: center center;
+}
+.header_sp #nav_sp.active .menu_wrap .sub-menu .wrapper .links_img li:nth-child(1) {
+  background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/category_img1.png);
+}
+.header_sp #nav_sp.active .menu_wrap .sub-menu .wrapper .links_img li:nth-child(2) {
+  background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/category_img3.png);
+}
+.header_sp #nav_sp.active .menu_wrap .sub-menu .wrapper .links_img li:nth-child(3) {
+  background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/category_img4.png?v=1717748160);
 }
 .header_sp #nav_sp.active .menu_wrap .sns_ctn {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  margin-bottom: 45px;
 }
 .header_sp #nav_sp.active .menu_wrap .sns_ctn .sns_btn {
   flex-basis: 50%;
@@ -1199,6 +1273,24 @@ sp header
 }
 .header_sp #nav_sp.active .menu_wrap .sns_ctn .sns_btn:nth-of-type(1) {
   border-right: 1px solid #000;
+}
+.header_sp #nav_sp.active .menu_wrap .bannar_ctn {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header_sp #nav_sp.active .menu_wrap .bannar_ctn img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
 }
 .header_sp #nav_sp .deco {
   position: absolute;
@@ -1222,8 +1314,9 @@ sp header
 .header_sp #nav_sp .deco2 {
   top: auto;
   right: auto;
-  bottom: 0;
   left: 0;
+  bottom: -50px;
+  z-index: -1;
 }
 .header_sp .ck_search {
   position: absolute;
@@ -1610,7 +1703,7 @@ input[type=button]:focus {
 
 @media screen and (max-width: 1024px) {
   .under_fv {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -2485,7 +2578,7 @@ input[type=button]:focus {
 
 @media screen and (max-width: 1024px) {
   .under_fv {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -3698,7 +3791,7 @@ input[type=button]:focus {
 
 @media screen and (max-width: 1024px) {
   .under_fv {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -4592,7 +4685,7 @@ input[type=button]:focus {
 
 @media screen and (max-width: 1024px) {
   .under_fv {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -4672,9 +4765,20 @@ item-list
   transform: translateX(-50%);
   font-family: "Kaisei Opti", serif;
 }
+@media screen and (max-width: 599px) {
+  .under_fv .colec_ttl {
+    bottom: 5%;
+    font-size: 12px;
+  }
+}
 
 .under_ttl_item-list {
   width: 19.3055555556%;
+}
+@media screen and (max-width: 599px) {
+  .under_ttl_item-list {
+    width: 36.1111111111%;
+  }
 }
 
 .sec_category {
@@ -5308,7 +5412,7 @@ input[type=button]:focus {
 
 @media screen and (max-width: 1024px) {
   .under_fv {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -6025,7 +6129,7 @@ input[type=button]:focus {
 
 @media screen and (max-width: 1024px) {
   .under_fv {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -6667,7 +6771,7 @@ input[type=button]:focus {
 
 @media screen and (max-width: 1024px) {
   .under_fv {
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -7169,7 +7273,7 @@ contact
 }
 @media screen and (max-width: 599px) {
   #form .p-contact_wrap .form_wrap form table {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
   }
 }
