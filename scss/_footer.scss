@@ -1,0 +1,440 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+footer
+*************************************************/
+
+footer {
+    #links {
+        margin-top: -6rem;
+        position: relative;
+        z-index: 1;
+        .bg_photo {
+            width: 100%;
+        }
+        .links_ctn {
+            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/bg_orange.jpg);
+            background-size: cover;
+            padding: 7rem 0;
+            margin-top: -1px;
+
+            .links_ctt {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                @include ml {
+                    display: block;
+                }
+                li {
+                    flex-basis: 30%;
+                    text-align: center;
+                    background-size: cover;
+                    border-radius: 1rem;
+                    padding: 5rem 0 3.6rem;
+                    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+                    position: relative;
+                    @include ml {
+                        padding: 2rem 0 2rem;
+                        display: flex;
+                        margin-bottom: 10px;
+                    }
+                    &:nth-child(1) {
+                        background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/btn_qa.jpg);
+                        @include ml {
+                            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/btn_qa_sp.jpg?v=1717985049);
+                        }
+                    }
+                    &:nth-child(2) {
+                        background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/btn_contact.jpg);
+                        @include ml {
+                            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/btn_contact_sp.jpg?v=1717985049);
+                        }
+                    }
+                    &:nth-child(3) {
+                        background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/btn_shop.jpg);
+                        @include ml {
+                            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/btn_shop_sp.jpg?v=1717985049);
+                        }
+                    }
+                    .ttl_write {
+                        font-size: 2.2rem;
+                        letter-spacing: 0.17em;
+                        margin-bottom: 2.3rem;
+                        @include ml {
+                            flex-basis: 80%;
+                            margin-bottom: 0;
+                            margin-left: 80px;
+                            text-align: center;
+                        }
+                    }
+                    .btn_round_min {
+                        @include ml {
+                            flex-basis: 20%;
+                            font-size: 0;
+                            padding-bottom: 0rem;
+                            background-color: transparent;
+                            border: none;
+                            a {
+                                width: 100%;
+                                height: 50px;
+                                top: 0;
+                                left: 0;
+                                position: absolute;
+                                .arrow-right {
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 30px;
+                                    width: 18px;
+                                    height: 3px;
+                                    border-right: 2px solid #000;
+                                    border-bottom: 1px solid #000;
+                                    transform: skew(45deg);
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        transform: translateY(5px);
+                        transition: 0.2s;
+                        .ttl_write {
+                            color: v.$orange;
+                        }
+                        .btn_round_min {
+                            a {
+                                color: #000;
+                                .arrow-right {
+                                    border-right: 2px solid #000;
+                                    border-bottom: 2px solid #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_bottom {
+        padding-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 9rem;
+        @include ml {
+            display: block;
+            text-align: center;
+            position: relative;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 1.4rem;
+            letter-spacing: 0;
+            @include ml {
+                font-weight: 500;
+            }
+        }
+        .logo_ctn {
+            img {
+                width: 100%;
+                max-width: 24rem;
+                margin-bottom: 0.9rem;
+                @include ml {
+                    margin-bottom: 10px;
+                    width: 185px;
+                }
+            }
+            .address {
+                line-height: 1.5;
+                @include ml {
+                    display: none;
+                }
+            }
+            @include ml {
+                border-bottom: dotted 3px;
+            }
+        }
+        nav {
+            @include ml {
+                width: 50%;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+            @include mq {
+                width: 100%;
+            }
+            .menu {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 20rem;
+                gap: 0 5rem;
+                @include ml {
+                    width: 50%;
+                    height: auto;
+                    padding: 20px 0 15px 0;
+                    gap: 0 3rem;
+                    margin-left: 20px;
+                }
+                .li_ {
+                    font-size: 1.4rem;
+                    letter-spacing: 0.17em;
+                    @include ml {
+                        list-style-image: url("https://cdn.shopify.com/s/files/1/0879/4567/5034/files/icon_arrow_sp.svg?v=1718069768");
+                        padding-left: 12px; /* 画像の幅に合わせて適切なパディングを設定します */
+                        width: fit-content;
+                        position: relative;
+                        height: 90px;
+                    }
+                    .sub_under {
+                        padding-top: 1.5rem;
+                        margin-left: 2.5rem;
+                        @include ml {
+                            margin-bottom: 2rem;
+                            margin-left: 0px;
+                            position: absolute;
+                            top: -14px;
+                            left: 140px;
+                            width: 150px;
+                        }
+                        @include mq {
+                            top: -10px;
+                            left: 90px;
+                        }
+                        .li {
+                            margin-bottom: 0.9rem;
+                            list-style-type: disc;
+                            @include ml {
+                                list-style-image: none;
+                                width: fit-content;
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+                .li {
+                    margin-bottom: 2rem;
+                    @include ml {
+                        list-style-image: url("https://cdn.shopify.com/s/files/1/0879/4567/5034/files/icon_arrow_sp.svg?v=1718069768");
+                        padding-left: 12px; /* 画像の幅に合わせて適切なパディングを設定します */
+                        width: fit-content;
+                    }
+                    a {
+                        font-size: 1.4rem;
+                        letter-spacing: 0.17em;
+                        @include mq {
+                            font-size: 12px;
+                        }
+                    }
+                    &:hover {
+                        color: v.$orange;
+                    }
+                    @include ml {
+                        &:nth-of-type(5),
+                        &:nth-of-type(6),
+                        &:nth-of-type(7) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu_sub {
+            min-width: 10rem;
+            @include ml {
+                width: 30%;
+                position: absolute;
+                top: 180px;
+                right: 0;
+            }
+            @include mq {
+                top: 160px;
+            }
+            .menu_sub_li {
+                a {
+                    display: flex;
+                    margin-bottom: 2rem;
+                    align-items: center;
+                    font-size: 1.4rem;
+                    .icon_svg {
+                        width: 2.3rem;
+                        margin-right: 0.7rem;
+                        fill: #000;
+                        @include ml {
+                            width: 19px;
+                        }
+                    }
+
+                    &:hover {
+                        color: v.$orange;
+                        .icon_svg {
+                            fill: v.$orange;
+                        }
+                    }
+                }
+            }
+            .insta {
+                display: none;
+                @include ml {
+                    display: block;
+                }
+                img {
+                    width: 2.3rem;
+                    margin-right: 0.7rem;
+                }
+                // &:hover {
+                //     p {
+                //         color: #000;
+                //     }
+                // }
+            }
+        }
+
+        .contact {
+            @include ml {
+                border-bottom: dotted 3px;
+                border-top: dotted 3px;
+                padding-top: 20px;
+            }
+            .contact_btn {
+                display: flex;
+                justify-content: center;
+                background-color: v.$orange;
+                border: 1px solid v.$orange;
+                border-radius: 5rem;
+                letter-spacing: 0.01em;
+                align-items: center;
+                padding: 1.3rem;
+                width: 25rem;
+                margin-bottom: 1.5rem;
+                @include ml {
+                    margin: 0 auto 10px;
+                }
+                #contact_svg {
+                    width: 3rem;
+                    margin-right: 1.5rem;
+                    fill: #fff;
+                }
+                p {
+                    color: #fff;
+                    font-size: 2rem;
+                    letter-spacing: 0.15em;
+                }
+                &:hover {
+                    background-color: #fff;
+                    #contact_svg {
+                        fill: v.$orange;
+                    }
+                    p {
+                        color: v.$orange;
+                    }
+                }
+            }
+
+            .tel {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 0.5rem;
+                @include ml {
+                    margin-bottom: 10px;
+                }
+                #tel_svg {
+                    width: 4.5rem;
+                    fill: v.$orange;
+                }
+                a {
+                    color: v.$orange;
+                    font-size: 2.9rem;
+                    letter-spacing: 0.02em;
+                    font-weight: 500;
+                }
+                &:hover {
+                    a {
+                        color: #fff;
+                    }
+                    #tel_svg {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+
+        .hour {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            @include ml {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .footer_sns {
+        display: flex;
+        width: 74px;
+        justify-content: space-between;
+        margin: 0 auto 20px;
+        li {
+            width: 30px;
+        }
+        @include ml {
+            display: none;
+        }
+    }
+    small {
+        font-size: 10px;
+        letter-spacing: 0.17em;
+        display: block;
+        width: fit-content;
+        margin: 0 auto 4rem;
+        @include ml {
+            background-color: #000;
+            padding: 10px;
+            color: #fff;
+            font-size: 9px;
+            width: 100vw;
+            text-align: center;
+            margin: 0 auto 0;
+        }
+    }
+
+    .footer_sp {
+        display: none;
+        text-align: left;
+        margin-bottom: 40px;
+        @include ml {
+            display: block;
+        }
+
+        .menu {
+            padding-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            gap: 5px 30px;
+            font-size: 11px;
+            .li {
+                margin-right: 30px;
+            }
+        }
+        div {
+            text-align: left;
+            margin-bottom: 30px;
+            .address {
+                margin-bottom: 30px;
+                line-height: 1.5;
+                font-size: 13px;
+                letter-spacing: 0.17em;
+            }
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}

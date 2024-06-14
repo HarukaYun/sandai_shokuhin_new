@@ -1,0 +1,375 @@
+/*************************************************
+common-style
+*************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@700&family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+
+@mixin base_width {
+  margin: 0 auto;
+  width: 1200px;
+}
+// @extendでスタイルの継承
+// @mixinでステイルの定義
+// @includeでmixinの呼び出し
+
+// ブレイクポイント
+// PC基準でコーディングする場合
+$breakpoints: (
+  "sm": "screen and (max-width: 599px)",
+  //スマホ
+  "md": "screen and (max-width: 1024px)",
+  //タブレット
+) !default;
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints , $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin ml($breakpoint: md) {
+  @media #{map-get($breakpoints , $breakpoint)} {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ie_ObjectFit {
+  object-fit: cover;
+  font-family: "object-fit: cover;";
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+  @include mq {
+    font-size: 47%;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Noto Sans JP", sans-serif;
+  max-width: 1900px;
+  margin: 0 auto;
+  background-color: #fff8f1;
+  p {
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+    line-height: 1.92;
+    @include mq {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+  a {
+    display: block;
+  }
+  &::after {
+    background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/bg.png);
+    background-size: cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.inner {
+  width: calc(1240 / 1440 * 100%);
+  margin: 0 auto;
+  @include ml {
+    width: calc(1340 / 1440 * 100%);
+  }
+  @include mq {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// /iOSでのデフォルトスタイルをリセット /
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  &::-webkit-search-decoration {
+    display: none;
+  }
+  &:focus {
+    outline-offset: -2px;
+  }
+}
+
+.ttl_write {
+  font-family: "Kaisei Opti", serif;
+  font-size: 2.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.btn {
+  border-bottom: dotted 3px;
+  width: fit-content;
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  a {
+    display: flex;
+    letter-spacing: 0.06em;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-right: 5px;
+    @include mq {
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .arrow-right {
+      margin-top: 4px;
+      margin-left: 5px;
+      width: 38px;
+      height: 8px;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+      transform: skew(45deg);
+      display: block;
+    }
+  }
+  &:hover {
+    border-bottom: dotted 3px #fff;
+    a {
+      color: #fff;
+      .arrow-right {
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+}
+
+.fukidashi {
+  margin: 0 auto 2.8rem;
+  display: block;
+  img {
+    width: 100%;
+  }
+}
+
+.cart_btn {
+  display: flex;
+  justify-content: center;
+  background-color: #ff9800;
+  color: #fff;
+  border-radius: 1rem;
+  letter-spacing: 0.01em;
+  width: 23.5rem;
+  align-items: center;
+  padding: 1.3rem;
+  border: 2px solid #ff9800;
+  @include mq {
+    padding: 0.5rem;
+    width: 160px;
+  }
+  .icon_svg {
+    width: 2.4rem;
+    margin-right: 1.9rem;
+    fill: #fff;
+  }
+  &:hover {
+    transform: translateY(3px);
+    transition: 0s;
+    color: #ff9800;
+    background: #fff;
+    .icon_svg {
+      fill: #ff9800;
+    }
+  }
+}
+
+.btn_round {
+  width: fit-content;
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  background-color: #ff9800;
+  text-align: center;
+  padding: 1.2rem 9rem 1.2rem 4.3rem;
+  border-radius: 5rem;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  a {
+    display: flex;
+    letter-spacing: 0.06em;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-right: 5px;
+    color: #fff;
+    .arrow-right {
+      position: absolute;
+      right: -7rem;
+      top: 30%;
+      width: 35px;
+      height: 6px;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: skew(45deg);
+      display: block;
+      @include mq {
+        width: 25px;
+        height: 4px;
+        border-right: 2px solid #fff;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+  &:hover {
+    background-color: #fff;
+    border: 1px solid #ff9800;
+    a {
+      color: #ff9800;
+      .arrow-right {
+        border-right: 2px solid #ff9800;
+        border-bottom: 2px solid #ff9800;
+      }
+    }
+  }
+}
+
+.btn_round_min {
+  width: fit-content;
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  background-color: #fff;
+  text-align: center;
+  padding: 0.8rem 9rem 0.7rem 4.3rem;
+  border-radius: 5rem;
+  margin: 0 auto;
+  border: 1px solid #000;
+  a {
+    display: flex;
+    letter-spacing: 0.06em;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-right: 5px;
+    color: #000;
+    .arrow-right {
+      position: absolute;
+      right: -7rem;
+      top: 33%;
+      width: 29px;
+      height: 6px;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+      transform: skew(45deg);
+      display: block;
+      @include mq {
+        top: 45%;
+        right: 11%;
+      }
+      @include mq {
+        top: 105px;
+        right: 30px;
+      }
+    }
+  }
+}
+
+.is_sp {
+  display: none;
+  @include mq {
+    display: block;
+  }
+}
+
+///////////
+/// 下層ページのファーストビュー
+///////////
+
+.under_fv {
+  width: 100%;
+  text-align: center;
+  background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/under_fv_top.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 16.3rem;
+  margin-bottom: 2rem;
+  @include ml {
+    margin-top: 100px;
+  }
+  @include mq {
+    margin-top: 30px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/under_fv_top_sp.png?v=1718270292);
+  }
+  &::after {
+    position: absolute;
+    bottom: -2.9rem;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3rem;
+    background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/under_fv_wave.png);
+    background-size: cover;
+    background-position: bottom center;
+    @include mq {
+      height: 14px;
+      bottom: -13.5px;
+      background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/under_fv_wave_sp.png?v=1718270713);
+    }
+  }
+
+  .under_ttl {
+    position: absolute;
+    top: calc(50% + 2.5rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .deco {
+    position: absolute;
+    top: 1rem;
+    width: 23rem;
+    z-index: 2;
+    @include mq {
+      width: 90px;
+      top: auto;
+      bottom: 1rem;
+    }
+  }
+  .deco1 {
+    left: 0;
+    @include mq {
+      left: 0px;
+    }
+  }
+  .deco2 {
+    right: 0;
+    @include mq {
+      right: 0px;
+    }
+  }
+}

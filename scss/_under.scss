@@ -1,0 +1,893 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+transaction / policy /company
+
+
+/*************************************************
+特定商取引法に基づく表記
+transaction
+*************************************************/
+
+.under_ttl_transaction {
+    width: calc(532 / 1440 * 100%);
+    @include ml() {
+        width: 65%;
+    }
+    @include mq() {
+        width: 70%;
+    }
+}
+.p-terms_wrap {
+    padding-top: 11.5rem;
+    padding-bottom: 22rem;
+    @include ml() {
+        padding: 11.5rem 0 10rem;
+    }
+    table {
+        width: 100%;
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 30px 0;
+        @include c.mq(sm) {
+            border-spacing: 10px 0;
+        }
+        tr {
+            &:first-of-type {
+                th {
+                    padding-top: 0;
+                }
+                td {
+                    padding-top: 0;
+                }
+            }
+            th {
+                width: 17%;
+                font-size: 1.8rem;
+                letter-spacing: 0.17em;
+                font-weight: 600;
+                padding: 30px 0;
+                border-bottom: 3px dotted v.$orange;
+                @include c.mq(sm) {
+                    width: 25%;
+                    font-size: 1.4rem;
+                    padding: 15px 0;
+                }
+            }
+
+            td {
+                font-size: 1.7rem;
+                letter-spacing: 0.17em;
+                line-height: 1.5;
+                padding: 30px 0 30px 8px;
+                border-bottom: 3px dotted #000;
+                @include c.mq(sm) {
+                    font-size: 1.4rem;
+                    padding: 15px 0 15px 8px;
+                }
+                span {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+/*************************************************
+プライバシーポリシー
+policy
+*************************************************/
+.under_ttl_policy {
+    width: calc(369 / 1440 * 100%);
+    @include ml() {
+        width: 45%;
+    }
+    @include mq() {
+        width: 50%;
+    }
+}
+
+.p-policy_wrap {
+    padding-top: 11.5rem;
+    padding-bottom: 22rem;
+    @include c.mq(sm) {
+        padding: 11.5rem 15px 10rem;
+    }
+    .inner {
+        div {
+            &:nth-of-type(14) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .policy-message {
+        margin-bottom: 100px;
+        @include c.mq(sm) {
+            margin-bottom: 60px;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        p {
+            text-align: center;
+            line-height: 2;
+            letter-spacing: 2px;
+            font-weight: 400;
+            margin-bottom: 25px;
+            @include c.mq(sm) {
+                text-align: left;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .policy-wrap {
+        margin-bottom: 100px;
+        @include c.mq(sm) {
+            margin-bottom: 60px;
+        }
+        h3 {
+            font-size: 1.8rem;
+            letter-spacing: 0.17em;
+            font-weight: 600;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            background-image: linear-gradient(to right, #000, #000 3px, transparent 3px, transparent 6px);
+            background-repeat: repeat-x;
+            background-position: left bottom;
+            background-size: 6px 3px;
+        }
+        .box {
+            p {
+                font-size: 1.5rem;
+                letter-spacing: 0.17em;
+                line-height: 2;
+                margin-bottom: 25px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                a {
+                    border-bottom: 1px solid #000;
+                    width: fit-content;
+                    @include c.mq(sm) {
+                        max-width: 315px;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*************************************************
+会社概要
+company
+*************************************************/
+
+.under_ttl_company {
+    width: calc(189 / 1440 * 100%);
+    @include ml() {
+        width: 25%;
+    }
+    @include mq() {
+        width: 30%;
+    }
+}
+
+#profile {
+    padding-top: 6rem;
+    .fukidashi {
+        width: 16.3rem;
+        margin: 0 auto 2rem;
+        @include ml() {
+            width: 25%;
+        }
+        @include mq() {
+            width: 30%;
+        }
+    }
+    h3 {
+        width: calc(189 / 1240 * 100%);
+        margin: 0 auto 3.7rem;
+        @include ml() {
+            width: 25%;
+        }
+    }
+
+    .p-terms_wrap {
+        padding-top: 3rem;
+        margin-bottom: 13rem;
+        padding-bottom: 0;
+    }
+}
+
+#access {
+    background: #fff;
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 16rem;
+    &::before {
+        position: absolute;
+        top: -5rem;
+        left: 0;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 5rem;
+        background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/bg_wave_wh.png);
+        background-size: cover;
+        background-position: center;
+    }
+    h3 {
+        width: calc(186 / 1240 * 100%);
+        margin: 0 auto 9rem;
+        position: relative;
+        @include ml() {
+            width: 40%;
+        }
+        @include mq() {
+            width: 35%;
+        }
+        span {
+            position: absolute;
+            top: -14rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(163 / 186 * 100%);
+            max-width: 160px;
+        }
+    }
+
+    .map {
+        width: 100%;
+        height: 34rem;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .deco {
+        position: absolute;
+        width: calc(280 / 1440 * 100%);
+        z-index: 1;
+    }
+
+    .deco1 {
+        right: 0;
+        top: 1rem;
+    }
+    .deco2 {
+        left: 0;
+        bottom: 6rem;
+    }
+}
+
+/*************************************************
+お問い合わせ
+contact
+*************************************************/
+.under_ttl_contact {
+    width: calc(250 / 1440 * 100%);
+    @include ml() {
+        width: 33%;
+    }
+    @include mq() {
+        width: 38%;
+    }
+}
+
+#tel {
+    padding-top: 6rem;
+    .fukidashi {
+        width: 16.3rem;
+        margin: 0 auto 2rem;
+        @include ml() {
+            width: 25%;
+        }
+        @include mq() {
+            width: 30%;
+        }
+    }
+
+    h3 {
+        width: calc(202 / 1240 * 100%);
+        margin: 0 auto 1.7rem;
+        @include ml() {
+            width: 25%;
+        }
+    }
+
+    .tel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        #tel_svg {
+            width: 4.5rem;
+            fill: v.$orange;
+        }
+        a {
+            color: v.$orange;
+            font-size: 2.9rem;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+        }
+        &:hover {
+            a {
+                color: #fff;
+            }
+
+            #tel_svg {
+                fill: #fff;
+            }
+        }
+    }
+    .hour {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 9.7rem;
+        font-size: 1.6rem;
+        letter-spacing: 0.04em;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}
+
+#form {
+    background: #fff;
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 16rem;
+    &::before {
+        position: absolute;
+        top: -5rem;
+        left: 0;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 5rem;
+        background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/bg_wave_wh.png);
+        background-size: cover;
+        background-position: center;
+        @include mq() {
+            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/bg_wave_wh_sp.png);
+            height: 13px;
+            top: -12px;
+        }
+    }
+    h3 {
+        width: calc(186 / 1240 * 100%);
+        margin: 0 auto 6.7rem;
+        position: relative;
+        @include ml() {
+            width: 25%;
+        }
+        span {
+            position: absolute;
+            top: -14rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(204 / 186 * 100%);
+            max-width: 160px;
+            @include ml() {
+                width: 110%;
+            }
+        }
+    }
+
+    .p-contact_wrap {
+        width: calc(1140 / 1240 * 100%);
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        .form_wrap {
+            form {
+                text-align: center;
+                table {
+                    text-align: left;
+                    width: 100%;
+                    table-layout: fixed;
+                    @include c.mq(sm) {
+                        width: 85%;
+                        margin: 0 auto;
+                    }
+                    tr {
+                        &:last-of-type {
+                            th {
+                                vertical-align: baseline;
+                                padding-top: 10px;
+                            }
+                            td {
+                                padding-bottom: 40px;
+                            }
+                        }
+                        th {
+                            width: 20%;
+                            font-size: 1.8rem;
+                            letter-spacing: 0.17em;
+                            vertical-align: middle;
+                            padding-bottom: 17px;
+                            @include c.mq(md) {
+                                width: 20%;
+                            }
+                            @include c.mq(sm) {
+                                width: 100%;
+                                display: block;
+                                padding-bottom: 10px;
+                            }
+                        }
+                        td {
+                            background-color: #fff;
+                            width: 80%;
+                            padding-bottom: 17px;
+                            @include c.mq(md) {
+                                width: 80%;
+                            }
+                            @include c.mq(sm) {
+                                width: 100%;
+                                display: block;
+                            }
+                            input {
+                                width: 100%;
+                                background-color: #fff;
+                                border: 1px solid #000;
+                                border-radius: 5px;
+                                padding: 10px;
+                                letter-spacing: 1px;
+                                font-size: 1.5rem;
+                            }
+                            textarea {
+                                width: 100%;
+                                background-color: #fff;
+                                border: 1px solid #000;
+                                border-radius: 5px;
+                                padding: 10px;
+                                letter-spacing: 1px;
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+                p {
+                    font-size: 1.6rem;
+                    letter-spacing: 0.04em;
+                    text-align: center;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                    @include c.mq(sm) {
+                        text-align: left;
+                        width: 85%;
+                        margin: 0 auto 20px;
+                    }
+                    a {
+                        display: inline;
+                        color: v.$orange;
+                        text-decoration: underline v.$orange;
+                    }
+                }
+
+                .btn_round {
+                    width: 270px;
+                    height: 50px;
+                    padding: 1.2rem 9rem 1.2rem 6rem;
+                }
+            }
+        }
+    }
+
+    .deco {
+        position: absolute;
+        width: calc(280 / 1440 * 100%);
+        z-index: 1;
+        @include mq() {
+            width: 100px;
+        }
+    }
+    .deco1 {
+        right: 0;
+        top: 1rem;
+    }
+    .deco2 {
+        left: 0;
+        bottom: 12rem;
+    }
+}
+
+/*************************************************
+shopifyスタイル調整
+
+/*************************************************
+お問い合わせ　-送信後
+*************************************************/
+
+.shopify-challenge__container {
+    padding: 10rem 0;
+    .shopify-challenge__message {
+        margin-bottom: 2rem;
+    }
+    form {
+        .shopify-challenge__button {
+            margin-top: 5rem !important;
+            width: fit-content;
+            font-size: 1.6rem;
+            background-color: v.$orange;
+            text-align: center;
+            padding: 1.2rem 9rem 1.2rem 9rem;
+            border-radius: 5rem;
+            margin: 0 auto;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+    }
+}
+
+.contact {
+    .form__message {
+        font-size: 16px !important;
+        margin-bottom: 4rem;
+        position: sticky;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        @include c.mq(sm) {
+            font-size: 14px !important;
+            text-align: left !important;
+        }
+    }
+    .form__message svg {
+        width: 2rem;
+        @include c.mq(sm) {
+            width: 5rem;
+        }
+    }
+}
+
+/*************************************************
+カート
+*************************************************/
+
+cart-items {
+    width: calc(1182 / 1440 * 100%);
+    margin: 0 auto;
+    max-width: 1182px;
+    background-color: transparent !important;
+    padding-bottom: 30rem;
+    font-size: 1.6rem;
+    @include c.mq(md) {
+        padding-top: 180px !important;
+    }
+    @include c.mq(sm) {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 120px !important;
+    }
+    .title-wrapper-with-link {
+        margin-bottom: 4rem;
+        .title {
+            padding-bottom: 30px;
+            @include c.mq(sm) {
+                margin-bottom: auto;
+            }
+        }
+        a {
+            color: v.$orange;
+            text-align: right;
+        }
+    }
+
+    .cart-item__quantity {
+        .cart-quantity {
+            &::after {
+                box-shadow: none;
+            }
+        }
+    }
+
+    cart-remove-button {
+        .button {
+            color: v.$orange;
+        }
+    }
+
+    .cart__items {
+        .cart-item__totals {
+            .price {
+                position: relative;
+                &::after {
+                    content: "￥";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 60px;
+                }
+            }
+        }
+
+        .cart-item__details {
+            .product-option {
+                position: relative;
+                &:nth-child(2) {
+                    margin-left: 15px;
+                    &::after {
+                        content: "￥";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: -15px;
+                    }
+                }
+            }
+        }
+
+        .cart-items__heading--quantity {
+            padding-left: 1rem !important;
+        }
+        .cart-item__quantity {
+            padding-left: 1rem !important;
+        }
+    }
+}
+
+.cart__footer-wrapper {
+    width: calc(1182 / 1440 * 100%);
+    margin: 0 auto 8rem;
+    max-width: 1182px;
+    @include c.mq(sm) {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 50px !important;
+    }
+
+    .color-scheme-1 {
+        background-color: transparent !important;
+    }
+
+    .cart__checkout-button {
+        width: fit-content;
+        font-size: 1.6rem;
+        letter-spacing: 0.17rem;
+        background-color: v.$orange;
+        text-align: center;
+        padding: 1.2rem 9rem 1.2rem 9rem;
+        border-radius: 5rem;
+        margin: 0 0 1rem auto;
+        border: 1px solid #fff;
+        position: relative;
+        color: #fff;
+        &:hover {
+            transform: translateY(3px);
+            transition: 0s;
+            color: v.$orange;
+            background: #fff;
+            .icon_svg {
+                fill: v.$orange;
+            }
+        }
+        &::after {
+            box-shadow: none !important;
+        }
+    }
+
+    .tax-note {
+        text-align: left;
+        line-height: 1.5;
+        font-size: 12px;
+    }
+}
+
+/*************************************************
+ログイン
+*************************************************/
+
+.customer {
+    padding-top: 5rem !important;
+    padding-bottom: 10rem !important;
+    @include c.mq(md) {
+        padding-top: 15rem !important;
+        padding-bottom: 20rem !important;
+    }
+
+    #login {
+        font-size: 1.6rem;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .customer__title {
+        font-size: 1.6rem;
+    }
+
+    .field {
+        &::after {
+            box-shadow: none;
+        }
+    }
+
+    button {
+        background-color: v.$orange;
+        border-radius: 5rem;
+        &::after {
+            box-shadow: none;
+        }
+        &:hover {
+            transform: translateY(3px);
+            transition: 0s;
+            color: v.$orange;
+            background: #fff;
+            &::after {
+                box-shadow: none;
+            }
+        }
+    }
+
+    li {
+        button {
+            margin-top: 3rem;
+        }
+        button + button {
+            margin-top: 3rem !important;
+        }
+    }
+}
+
+/*************************************************
+レビュー
+*************************************************/
+
+.jdgm-rev-widg {
+    width: calc(1240 / 1440 * 100%);
+    margin: 8rem auto 8rem !important;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    font-size: 1.4rem !important;
+    @include ml {
+        width: calc(1340 / 1440 * 100%);
+        margin: 0 auto;
+    }
+    @include mq {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    //「カスタマーレビュー」
+    .jdgm-rev-widg__title {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 6rem !important;
+    }
+
+    //レビューを書くボタン
+    .jdgm-write-rev-link {
+        background-color: v.$orange !important;
+        border: v.$orange !important;
+        &:hover {
+            background-color: #fff;
+            border: #fff;
+            color: v.$orange;
+        }
+        @include ml {
+            width: 50%;
+        }
+        @include mq {
+            width: 80%;
+            max-width: auto !important;
+        }
+    }
+
+    //ソートの文字色
+    .jdgm-sort-dropdown {
+        color: #000 !important;
+    }
+
+    //ソートの矢印
+    .jdgm-sort-dropdown-arrow {
+        color: #000 !important;
+    }
+
+    //日付
+    .jdgm-rev__timestamp {
+        font-size: 14px;
+        color: #000;
+    }
+
+    .jdgm-row-actions {
+        width: calc(1240 / 1440 * 100%);
+        margin: 0 auto;
+        @include ml {
+            width: calc(1340 / 1440 * 100%);
+        }
+        @include mq {
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .jdgm-rev-widg__body {
+        width: calc(1240 / 1440 * 100%);
+        margin: 0 auto;
+        @include ml {
+            width: calc(1340 / 1440 * 100%);
+        }
+        @include mq {
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .jdgm-rev__icon {
+            &::before {
+                color: #000;
+            }
+        }
+
+        .jdgm-rev__author {
+            color: #000;
+        }
+    }
+
+    //レビューのバー
+    .jdgm-histogram__bar-content {
+        opacity: 1 !important;
+    }
+}
+
+.jdgm-form {
+    color: #000;
+    font-size: 1.4rem;
+
+    input {
+        border: 1px solid #285aa8 !important;
+    }
+
+    textarea {
+        border: 1px solid #285aa8 !important;
+    }
+
+    .jdgm-btn--border {
+        color: v.$orange;
+        border-color: v.$orange !important;
+        &:hover {
+            background-color: v.$orange !important;
+            border: 1px solid v.$orange !important;
+            color: #fff !important;
+            opacity: 1 !important;
+        }
+    }
+
+    .jdgm-form__fieldset {
+        p {
+            line-height: 1.8;
+        }
+        a {
+            border-bottom: 1px solid #000;
+            width: fit-content;
+            margin: 0 auto;
+        }
+    }
+    .jdgm-btn--solid {
+        background-color: v.$orange !important;
+        border: 1px solid v.$orange !important;
+        &:hover {
+            background-color: #fff !important;
+            border: 1px solid #fff !important;
+            color: v.$orange !important;
+            opacity: 1 !important;
+        }
+    }
+}

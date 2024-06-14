@@ -1,0 +1,440 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+about
+*************************************************/
+
+.is_sp {
+    display: none;
+    @include mq {
+        display: block;
+    }
+}
+
+.is_pc {
+    @include mq {
+        display: none;
+    }
+}
+.fv_about {
+    width: 100%;
+    height: 75vh;
+    text-align: center;
+    background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_fv.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+    @include ml {
+        background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_fv_sp.jpg);
+        height: 60vh;
+    }
+
+    .ttl_write {
+        position: absolute;
+        left: calc(10 / 144 * 100%);
+        bottom: 12rem;
+        text-align: left;
+        font-size: 4rem;
+        color: #fff;
+        @include mq {
+            display: none;
+        }
+    }
+    .about_ttl_loop {
+        width: 100vw;
+        max-width: 1900px;
+        height: 70px;
+        position: absolute;
+        left: 50%;
+        bottom: 4.2rem;
+        transform: translateX(-50%);
+        z-index: 2;
+        content: "";
+        display: block;
+        @include mq {
+            height: 45px;
+        }
+        .about_ttl_loop_ctt {
+            height: 70px;
+            width: 100%;
+            background: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_catch.png) repeat-x;
+            background-size: auto 70px; /* 高さを固定し、横幅は自動 */
+            animation: loop-slide 18s infinite linear;
+            @include mq {
+                height: 45px;
+                background-size: auto 45px; /* 高さを固定し、横幅は自動 */
+                animation: loop-slide 24s infinite linear;
+            }
+        }
+    }
+}
+
+@keyframes loop-slide {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1816px 0;
+    }
+}
+
+#top_msg {
+    position: relative;
+    margin-top: -9rem;
+    margin-bottom: 9.6rem;
+    position: relative;
+    z-index: 1;
+    @include ml {
+        margin-top: -12rem;
+    }
+    @include mq {
+        margin-top: -9rem;
+    }
+    .wrapper {
+        background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_bg_orange_wave3.png);
+        background-size: cover;
+        background-position: top center;
+        @include mq {
+            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_bg_orange_wave_sp.png);
+        }
+    }
+    .ctn {
+        padding-top: 18.2rem;
+        padding-bottom: 8rem;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        @include ml {
+            display: block;
+        }
+        @include mq {
+            padding-top: 15rem;
+            height: 400px;
+        }
+        .ctt_ttl {
+            flex-basis: 50%;
+        }
+        .ctt {
+            flex-basis: 50%;
+            p {
+                width: 95%;
+            }
+        }
+    }
+
+    .top_msg_img {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#our_pride {
+    margin-bottom: 15.8rem;
+    @include mq {
+        margin-bottom: 7rem;
+    }
+    .fukidashi {
+        width: 23.5rem;
+        margin: 0 auto 2rem;
+    }
+    h3 {
+        width: calc(410 / 1240 * 100%);
+        margin: 0 auto 4.8rem;
+        @include mq {
+            width: calc(270 / 360 * 100%);
+            margin: 0 auto 1rem;
+        }
+    }
+
+    ul {
+        margin-bottom: 3rem;
+    }
+    /* 斜め配置 clip-path */
+    .block {
+        position: relative;
+        margin-bottom: 2rem;
+        @include mq {
+            margin-bottom: 30px;
+        }
+        &:nth-child(1) .wrapper_bg {
+            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_dialog1.png);
+            @include mq {
+                background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_dialog1_sp.png);
+            }
+        }
+
+        &:nth-child(2) .wrapper_bg {
+            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files//about_dialog2.png);
+            @include mq {
+                background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_dialog2_sp.png);
+            }
+        }
+
+        &:nth-child(3) .wrapper_bg {
+            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_dialog3.png);
+            @include mq {
+                background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_dialog3_sp.png);
+            }
+        }
+        .wrapper_bg {
+            -webkit-clip-path: polygon(0 25%, 100% 0, 100% 75%, 0% 100%);
+            clip-path: polygon(0 25%, 100% 0, 100% 75%, 0% 100%);
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            @include ml {
+                clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+            }
+            @include mq {
+                clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+            }
+            .ctt {
+                width: 48%;
+                margin: 0 0 0 auto;
+                padding-top: 12.4rem;
+                padding-bottom: 16rem;
+                min-height: 600px;
+                @include mq {
+                    width: 100%;
+                    padding-top: calc(60px + 260px);
+                    padding-bottom: 60px;
+                }
+                .ttl_write {
+                    color: #000;
+                    font-size: 2.8rem;
+                    padding: 2rem 0;
+                    position: relative;
+                    margin-bottom: 0;
+                    @include mq {
+                        text-align: center;
+                    }
+                    .no {
+                        position: absolute;
+                        top: 50%;
+                        left: -10rem;
+                        transform: translateY(-50%);
+                        width: 7.5rem;
+                        @include mq {
+                            top: -260px;
+                            left: 0px;
+                            transform: translateX(0);
+                            width: 80px;
+                        }
+                    }
+                }
+            }
+
+            .ctt_rev {
+                margin: 0 auto 0 10rem;
+                min-height: 600px;
+                @include mq {
+                    margin: 0 auto;
+                }
+                .ttl_write {
+                    .no {
+                        @include mq {
+                            right: 0px;
+                            left: auto;
+                        }
+                    }
+                }
+            }
+
+            .ctt_3 {
+                .ttl_write {
+                    .no {
+                        @include mq {
+                            top: -90px;
+                            right: 0px;
+                            left: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wrapper_bg_rev {
+            // -webkit-clip-path: polygon(0 25%, 100% 0, 100% 75%, 0% 100%);
+            clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
+            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_dialog2.png);
+            @include ml {
+                clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+            }
+            @include mq {
+                clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+                background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/about_dialog2_sp.png);
+            }
+        }
+
+        .ctt_img {
+            position: absolute;
+            top: -6rem;
+            left: calc(60 / 1440 * 100%);
+            width: calc(486 / 1240 * 100%);
+            @include ml {
+                top: 20rem;
+            }
+            @include mq {
+                top: 60px;
+                width: 260px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .ctt_img_rev {
+            left: auto;
+            right: calc(60 / 1440 * 100%);
+            width: calc(486 / 1240 * 100%);
+            @include mq {
+                width: 260px;
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+#shop {
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 6rem;
+    @include mq {
+        padding-bottom: 12rem;
+    }
+    &::before {
+        position: absolute;
+        top: -5rem;
+        left: 0;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 5rem;
+        background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/bg_wave_wh.png);
+        background-size: cover;
+        background-position: center;
+        @include mq {
+            background-image: url(https://cdn.shopify.com/s/files/1/0879/4567/5034/files/bg_wave_wh_sp.png);
+            height: 2rem;
+            top: -2rem;
+        }
+    }
+
+    .ctn {
+        display: flex;
+        position: relative;
+        @media screen and (min-width: 1510px) {
+            margin-bottom: 2rem;
+        }
+        @include mq {
+            display: block;
+            overflow: hidden;
+        }
+        .ctt {
+            flex-basis: 50%;
+            text-align: center;
+            padding-top: 6.6rem;
+            h3 {
+                width: calc(174 / 620 * 100%);
+                margin-bottom: 1.2rem;
+                margin: 0 auto 1.3rem;
+            }
+            .sub_ttl {
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 800;
+                font-style: normal;
+                font-size: 2.4rem;
+                letter-spacing: 0.05em;
+                color: v.$orange;
+                margin-bottom: 6.3rem;
+            }
+            .txt_box {
+                text-align: left;
+                margin-bottom: 6rem;
+                p {
+                    font-size: 1.6rem;
+                    letter-spacing: 0.06em;
+                    line-height: 1.68;
+                    margin-bottom: 1.8rem;
+                }
+                .hour {
+                    width: 85%;
+                    margin-bottom: 3rem;
+                    .hour_ttl {
+                        font-size: 1.8rem;
+                        position: relative;
+                        margin-bottom: 1.5rem;
+                        &::after {
+                            position: absolute;
+                            top: 50%;
+                            left: 90px;
+                            transform: translateY(-50);
+                            content: "";
+                            display: block;
+                            width: 75%;
+                            height: 1px;
+                            background-color: #000;
+                            @include mq {
+                                width: 85%;
+                            }
+                        }
+                    }
+                    p {
+                        margin-bottom: 0.1rem;
+                    }
+                }
+
+                .map {
+                    width: 90%;
+                    iframe {
+                        width: 100%;
+                    }
+                    @include mq {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .ctt_img {
+            flex-basis: 50%;
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: calc(93vw - 100%); /* 画像の幅をビューポート幅に対して設定 */
+                max-width: 78rem;
+                height: auto; /* 比率を維持 */
+            }
+        }
+
+        .deco {
+            position: absolute;
+            width: calc(210 / 1240 * 100%);
+            @include mq {
+                width: calc(120 / 390 * 100%);
+            }
+        }
+        .deco1 {
+            top: -1.5rem;
+            left: calc(-100 / 1440 * 100%);
+            @include mq {
+                top: 2rem;
+                left: -20px;
+            }
+        }
+
+        .deco2 {
+            top: 0rem;
+            right: 50.5%;
+            @include mq {
+                top: 2rem;
+                right: -20px;
+            }
+        }
+    }
+}

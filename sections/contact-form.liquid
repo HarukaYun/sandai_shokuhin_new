@@ -1,0 +1,99 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      {% comment %} <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- else -%}
+      <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2> {% endcomment %}
+    {%- endif -%}
+    {%- liquid
+      assign contact_form_class = 'isolate'
+      if settings.animations_reveal_on_scroll
+        assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
+      endif
+    -%}
+    {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+      {%- if form.posted_successfully? -%}
+        <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+          {% render 'icon-success' %}
+          {{ 'templates.contact.form.post_success' | t }}
+        </h2>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+            {% render 'icon-error' %}
+            {% comment %} {{ 'templates.contact.form.error_heading' | t }} {% endcomment %}
+          </h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+    {% comment %} 自作フォームここから {% endcomment %}
+    {% comment %} <form action="#"> {% endcomment %}
+      <table>
+        <tr>
+          <th><label for="form_name">お名前</label></th>
+          <td>
+            <input type="text" id="form_name" name="contact[お名前]" placeholder="例） 山田太郎" required>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="form_name">ふりがな</label></th>
+          <td>
+            <input type="text" id="form_kana" name="contact[ふりがな]" placeholder="例） やまだたろう" required>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="form_mail">メールアドレス</label></th>
+          <td>
+            <input type="email" id="form_mail" name="contact[email]" placeholder="例）xxxxxx@sample.com" required>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="form_tel">電話番号</label></th>
+          <td>
+            <input type="tel" id="form_tel" name="contact[電話番号]" placeholder="例）090-1234-1234" required>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="form_textarea">お問い合わせ内容</label></th>
+          <td>
+            <textarea name="contact[body]" id="form_textarea" cols="30" rows="15" placeholder="500字まで" maxlength="500"></textarea>
+          </td>
+        </tr>
+      </table>
+      <p><a href="/pages/policy" target="_blank">プライバシーポリシー</a>をご確認の上、「送信」ボタンをクリックしてください。</p>
+      <button class="btn_round"><a>送信する<span class="arrow-right"></a></span>
+        {% comment %} <a href="products.html">送信する<span class="arrow-right"></span></a> {% endcomment %}
+      </button>
+
+    {% comment %} 自作フォームここまで {% endcomment %}
+
+
+    {%- endform -%}
+  </div>
+</div>
+

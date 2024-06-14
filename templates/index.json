@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "top_main_M7ENax": {
+      "type": "top-main",
+      "blocks": {
+        "recommended_block_eAn6z8": {
+          "type": "recommended_block",
+          "settings": {
+            "recommend_link": "shopify:\/\/collections\/all",
+            "recommend_image": "shopify:\/\/shop_images\/fv_circle_img_new_3d7db3f5-97af-41d3-8e15-1ec4a87acc2d.png",
+            "recommend_image_sp": "shopify:\/\/shop_images\/fv_circle_img_sp.png",
+            "recommend_text": "あぐーギフトセット"
+          }
+        },
+        "banner_block_WMfEtw": {
+          "type": "banner_block",
+          "settings": {
+            "banner_image": "shopify:\/\/shop_images\/bannar_1_eb15ba83-352a-4f41-8a38-4c4fc9f94245.jpg",
+            "banner_image_sp": "shopify:\/\/shop_images\/bannar_sp.jpg",
+            "banner_link": ""
+          }
+        },
+        "banner_block_jKP3n4": {
+          "type": "banner_block",
+          "settings": {
+            "banner_image": "shopify:\/\/shop_images\/bannar_1_eb15ba83-352a-4f41-8a38-4c4fc9f94245.jpg",
+            "banner_image_sp": "shopify:\/\/shop_images\/bannar_sp.jpg",
+            "banner_link": ""
+          }
+        },
+        "banner_block_fbpnk8": {
+          "type": "banner_block",
+          "settings": {
+            "banner_image": "shopify:\/\/shop_images\/bannar_1_eb15ba83-352a-4f41-8a38-4c4fc9f94245.jpg",
+            "banner_image_sp": "shopify:\/\/shop_images\/bannar_sp.jpg",
+            "banner_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "recommended_block_eAn6z8",
+        "banner_block_WMfEtw",
+        "banner_block_jKP3n4",
+        "banner_block_fbpnk8"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "featured_collection",
+    "top_main_M7ENax"
+  ]
+}
