@@ -2184,6 +2184,15 @@ footer .footer_sns {
 footer .footer_sns li {
   width: 30px;
 }
+footer .footer_sns li:first-child:hover {
+  opacity: 0.5;
+}
+footer .footer_sns li #insta_svg {
+  fill: #000;
+}
+footer .footer_sns li #insta_svg:hover {
+  fill: #ff9800;
+}
 @media screen and (max-width: 1024px) {
   footer .footer_sns {
     display: none;
@@ -4234,6 +4243,11 @@ about
     margin-bottom: 2rem;
   }
 }
+@media screen and (max-width: 1024px) {
+  #shop .ctn {
+    align-items: baseline;
+  }
+}
 @media screen and (max-width: 599px) {
   #shop .ctn {
     display: block;
@@ -4259,6 +4273,15 @@ about
   letter-spacing: 0.05em;
   color: #ff9800;
   margin-bottom: 6.3rem;
+}
+#shop .ctn .ctt .img_shop_sp {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  #shop .ctn .ctt .img_shop_sp {
+    display: block;
+    margin-bottom: 12px;
+  }
 }
 #shop .ctn .ctt .txt_box {
   text-align: left;
