@@ -176,29 +176,40 @@
           <li class="li_btn"><a href="/pages/faq"><img src="https://cdn.shopify.com/s/files/1/0879/4567/5034/files/icon_faq_b.svg?v=1718264303" alt="">
           <p>よくあるご質問</p></a></li>
           
-          <li class="li menu-parent"><a class="parent">種類から選ぶ</a>
-          <ul class="sub-menu">
+          <li class="li menu-parent"><a class="parent">種類から選ぶ<span></span></a>
+          <div class="sub-menu">
             <div class="wrapper">
-            <li><a href="general.html">一般歯科</a></li>
-            <li><a href="perio.html">歯周病治療</a></li>
+                  <ul class="links links_img">
+                    <li><a href="/collections/pork" class="arrow_a">あぐー（豚肉）</a></li>
+                    {% comment %} <li><a href="/collections/beef" class="arrow_a">牛肉<span class="arrow-right"></span></a></li> {% endcomment %}
+                    <li><a href="/collections/source" class="arrow_a">タレ漬け肉</a></li>
+                    <li><a href="/collections/soup" class="arrow_a">汁物</a></li>
+                  </ul>
           </div>
-          </ul>
+          </div>
           </li>
-          <li class="li menu-parent"><a class="parent">予算から選ぶ</a>
-          <ul class="sub-menu">
+          <li class="li menu-parent"><a class="parent">予算から選ぶ<span></span></a>
+          <div class="sub-menu">
             <div class="wrapper">
-            <li><a href="general.html">一般歯科</a></li>
-            <li><a href="perio.html">歯周病治療</a></li>
+                  <ul class="links">
+                    <li><a href="/collections/999" class="arrow_a">〜999円</a></li>
+                    <li><a href="/collections/1000-4999" class="arrow_a">1,000円〜4,999円</a></li>
+                    <li><a href="/collections/5000-9999" class="arrow_a">5,000円〜9,999円</a></li>
+                    <li><a href="/collections/10000" class="arrow_a">10,000円〜</a></li>
+                  </ul>
           </div>
-          </ul>
+          </div>
           </li>
-          <li class="li menu-parent"><a class="parent">用途から選ぶ</a>
-          <ul class="sub-menu">
+          <li class="li menu-parent"><a class="parent">用途から選ぶ<span></span></a>
+          <div class="sub-menu">
             <div class="wrapper">
-            <li><a href="general.html">一般歯科</a></li>
-            <li><a href="perio.html">歯周病治療</a></li>
+                  <ul class="links">
+                    <li><a href="/collections/bbq" class="arrow_a">BBQ/焼肉</a></li>
+                    <li><a href="/collections/sukiyaki" class="arrow_a">すき焼き/<br>しゃぶしゃぶ</a></li>
+                    <li><a href="/collections/gift" class="arrow_a">ギフト</a></li>
+                  </ul>
           </div>
-          </ul>
+          </div>
           </li>
 
           <li class="li_btn"><a href="/pages/contact-form"><img src="https://cdn.shopify.com/s/files/1/0879/4567/5034/files/icon_contact2.svg?v=1716868268" alt="">
@@ -218,9 +229,52 @@
             </li>
           </div>
 
+          <div class="bannar_ctn">
+            {% for block in section.blocks %}
+              {% if block.type == 'banner_block' %}
+            <a href="{{ block.settings.banner_link }}">
+            <img src="{{ block.settings.banner_image_sp | img_url: 'master' }}" alt="">
+            </a>
+
+          {% endif %}
+        {% endfor %}
+          </div>
+
         </div>
         <span class="deco deco1"><img src="https://cdn.shopify.com/s/files/1/0879/4567/5034/files/bg_deco.png" alt=""></span>
         <span class="deco deco2"><img src="https://cdn.shopify.com/s/files/1/0879/4567/5034/files/bg_deco.png" alt=""></span>
       </ul>
   </div>
   <!-- ここまでspヘッダー -->
+
+  {% schema %}
+    {
+      "name": "Banner Section",
+      "settings": [],
+      "blocks": [
+        {
+          "type": "banner_block",
+          "name": "バナーブロック",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "banner_image_sp",
+              "label": "バナー画像(スマホ用)"
+            },
+            {
+              "type": "url",
+              "id": "banner_link",
+              "label": "リンク先"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Default",
+          "category": "Custom"
+        }
+      ]
+    }
+    {% endschema %}
+    

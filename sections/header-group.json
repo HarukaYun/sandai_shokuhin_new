@@ -29,6 +29,18 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "banner_block_rj4Fyg": {
+          "type": "banner_block",
+          "settings": {
+            "banner_image_sp": "shopify:\/\/shop_images\/bannar_sp.jpg",
+            "banner_link": "shopify:\/\/collections\/pork"
+          }
+        }
+      },
+      "block_order": [
+        "banner_block_rj4Fyg"
+      ],
       "settings": {
       }
     }
