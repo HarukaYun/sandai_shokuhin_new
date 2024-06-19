@@ -1,0 +1,11 @@
+<div class="cart-custom-field field-derively-time">
+  <p>おまけ</p>
+  <select id="" name="attributes[おまけ]" required>
+    <option value="" selected>選択する</option>
+  <option value="中味汁 180g"{% if cart.attributes["おまけ"] == "中味汁 180g" %} selected{% endif %}>中味汁 180g</option>
+  <option value="牛汁 180g"{% if cart.attributes["おまけ"] == "牛汁 180g" %} selected{% endif %}>牛汁 180g</option>
+  <option value="ヤギ汁 180g"{% if cart.attributes["おまけ"] == "ヤギ汁 180g" %} selected{% endif %}>ヤギ汁 180g</option>
+  <option value="アヒル汁 180g"{% if cart.attributes["おまけ"] == "アヒル汁 180g" %} selected{% endif %}>アヒル汁 180g</option>
+  <option value="なし"{% if cart.attributes["おまけ"] == "なし" %} selected{% endif %}>なし</option>
+  </select>
+</div>

@@ -1,0 +1,9 @@
+
+<div class="cart-custom-field field-derively-time">
+  <p>のし</p>
+  <select id="" name="attributes[のし]" required>
+    <option value="" selected>選択する</option>
+  <option value="なし"{% if cart.attributes["のし"] == "あり" %} selected{% endif %}>あり</option>
+    <option value="なし"{% if cart.attributes["のし"] == "なし" %} selected{% endif %}>なし</option>
+  </select>
+</div>

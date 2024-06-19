@@ -447,6 +447,11 @@
       >
         {{ 'accessibility.loading' | t }}
       </p>
+
+      {% comment %} 追加のし用 {% endcomment %}
+      {% render 'cart-field-wrap' %}
+      {% render 'cart-field-gift' %}
+       {% comment %} 追加のし用 {% endcomment %}
     </form>
   </div>
 </cart-items>
