@@ -129,26 +129,6 @@
             </div>
           </form>
         </main-search>
-
-        {% comment %} 検索結果の表示部分ここから {% endcomment %}
-{% if search.results.size > 0 %}
-  <div class="search-results">
-    {% assign search_results = search.results | where: "type", "product" %}
-    {% for result in search_results %}
-      <div class="search-result-item">
-        <a href="{{ result.url }}">{{ result.title }}</a>
-        <p>{{ result.excerpt }}</p>
-      </div>
-    {% endfor %}
-  </div>
-{% else %}
-  <div class="no-results">
-    <p>検索結果は見つかりませんでした。</p>
-  </div>
-{% endif %}
-
-        {% comment %} 検索結果の表示部分ここまで {% endcomment %}
-
         {%- if settings.predictive_search_enabled -%}
           </predictive-search>
         {%- endif -%}
