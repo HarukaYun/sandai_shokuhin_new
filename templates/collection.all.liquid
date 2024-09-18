@@ -13,27 +13,27 @@
       <li id="from_cat">
         <h4>種類から選ぶ</h4>
         <ul class="links links_img">
-          <li><a href="/collections/pork" class="arrow_a">あぐー（豚肉）<span class="arrow-right"></span></a></li>
+          <li><a href="/collections/pork#products" class="arrow_a">あぐー（豚肉）<span class="arrow-right"></span></a></li>
           {% comment %} <li><a href="/collections/beef" class="arrow_a">牛肉<span class="arrow-right"></span></a></li> {% endcomment %}
-          <li><a href="/collections/source" class="arrow_a">タレ漬け肉<span class="arrow-right"></span></a></li>
-          <li><a href="/collections/soup" class="arrow_a">汁物<span class="arrow-right"></span></a></li>
+          <li><a href="/collections/source#products" class="arrow_a">タレ漬け肉<span class="arrow-right"></span></a></li>
+          <li><a href="/collections/soup#products" class="arrow_a">汁物<span class="arrow-right"></span></a></li>
         </ul>
       </li>
       <li id="from_price">
         <h4>予算から選ぶ</h4>
         <ul class="links">
-          <li><a href="/collections/999" class="arrow_a">〜999円<span class="arrow-right"></span></a></li>
-          <li><a href="/collections/1000-4999" class="arrow_a">1,000円〜4,999円<span class="arrow-right"></span></a></li>
-          <li><a href="/collections/5000-9999" class="arrow_a">5,000円〜9,999円<span class="arrow-right"></span></a></li>
-          <li><a href="/collections/10000" class="arrow_a">10,000円〜<span class="arrow-right"></span></a></li>
+          <li><a href="/collections/999#products" class="arrow_a">〜999円<span class="arrow-right"></span></a></li>
+          <li><a href="/collections/1000-4999#products" class="arrow_a">1,000円〜4,999円<span class="arrow-right"></span></a></li>
+          <li><a href="/collections/5000-9999#products" class="arrow_a">5,000円〜9,999円<span class="arrow-right"></span></a></li>
+          <li><a href="/collections/10000#products" class="arrow_a">10,000円〜<span class="arrow-right"></span></a></li>
         </ul>
       </li>
       <li id="from_use">
         <h4>用途から選ぶ</h4>
         <ul class="links">
-          <li><a href="/collections/bbq" class="arrow_a">BBQ/焼肉<span class="arrow-right"></span></a></li>
-          <li><a href="/collections/sukiyaki" class="arrow_a">すき焼き/<br>しゃぶしゃぶ<span class="arrow-right"></span></a></li>
-          <li><a href="/collections/gift" class="arrow_a">ギフト<span class="arrow-right"></span></a></li>
+          <li><a href="/collections/bbq#products" class="arrow_a">BBQ/焼肉<span class="arrow-right"></span></a></li>
+          <li><a href="/collections/sukiyaki#products" class="arrow_a">すき焼き/<br>しゃぶしゃぶ<span class="arrow-right"></span></a></li>
+          <li><a href="/collections/gift#products" class="arrow_a">ギフト<span class="arrow-right"></span></a></li>
         </ul>
       </li>
     </ul>
@@ -55,7 +55,7 @@
   </dd>
 </dl>
 
-  <ul class="item-list" data-aos="fade-up" data-aos-delay="100">
+  <ul class="item-list" data-aos="fade-up" data-aos-delay="100" id="products">
     {% for product in collection.products %}
     <li>
       <a class="item_link" href="{{ product.url }}">

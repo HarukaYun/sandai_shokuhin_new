@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "featured_collection": {
@@ -35,10 +44,10 @@
         "recommended_block_eAn6z8": {
           "type": "recommended_block",
           "settings": {
-            "recommend_link": "shopify:\/\/collections\/all",
-            "recommend_image": "shopify:\/\/shop_images\/fv_circle_img_new_3d7db3f5-97af-41d3-8e15-1ec4a87acc2d.png",
-            "recommend_image_sp": "shopify:\/\/shop_images\/fv_circle_img_sp.png",
-            "recommend_text": "あぐーギフトセット"
+            "recommend_link": "shopify:\/\/products\/あぐーしゃぶしゃぶセット",
+            "recommend_image": "shopify:\/\/shop_images\/fv_recomend.png",
+            "recommend_image_sp": "shopify:\/\/shop_images\/fv_recomend_sp.png",
+            "recommend_text": "あぐーしゃぶしゃぶセット"
           }
         },
         "banner_block_WMfEtw": {
