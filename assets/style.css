@@ -33,11 +33,12 @@ common-style
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 150px;
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 47%;
+    scroll-padding-top: 300px;
   }
 }
 
@@ -458,12 +459,13 @@ common-style
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 150px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 47%;
+    scroll-padding-top: 300px;
   }
 }
 body {
@@ -1490,12 +1492,13 @@ common-style
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 150px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 47%;
+    scroll-padding-top: 300px;
   }
 }
 body {
@@ -2429,12 +2432,13 @@ common-style
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 150px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 47%;
+    scroll-padding-top: 300px;
   }
 }
 body {
@@ -3697,12 +3701,13 @@ common-style
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 150px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 47%;
+    scroll-padding-top: 300px;
   }
 }
 body {
@@ -4660,12 +4665,13 @@ common-style
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 150px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 47%;
+    scroll-padding-top: 300px;
   }
 }
 body {
@@ -5442,12 +5448,13 @@ common-style
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 150px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 47%;
+    scroll-padding-top: 300px;
   }
 }
 body {
@@ -6214,12 +6221,13 @@ common-style
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 150px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 47%;
+    scroll-padding-top: 300px;
   }
 }
 body {
@@ -6911,12 +6919,13 @@ common-style
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 150px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 47%;
+    scroll-padding-top: 300px;
   }
 }
 body {
