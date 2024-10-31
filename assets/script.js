@@ -108,7 +108,7 @@ $('.best_slide_pc').slick({
   arrows:false,//左右に出る矢印を非表示
   dots:false,
   slidesToShow: 4.5,
-  pauseOnHover: false,//hoverしても止めない
+  // pauseOnHover: false,//hoverしても止めない
   speed: 800,
   infinite: true,
   autoplay: true, //自動再生
@@ -128,6 +128,12 @@ $('.best_slide_pc').slick({
     }
 ]
 });
+
+// ドラッグ中は自動再生を停止
+$('.best_slide').on('mousedown touchstart', function() {
+  $(this).slick('slickPause');
+});
+
 
 
 
