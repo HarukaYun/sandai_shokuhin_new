@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "featured_collection": {
@@ -54,23 +54,23 @@
           "type": "banner_block",
           "settings": {
             "banner_image": "shopify:\/\/shop_images\/bannar_1_eb15ba83-352a-4f41-8a38-4c4fc9f94245.jpg",
-            "banner_image_sp": "shopify:\/\/shop_images\/bannar_sp.jpg",
+            "banner_image_sp": "shopify:\/\/shop_images\/bannar_1_eb15ba83-352a-4f41-8a38-4c4fc9f94245.jpg",
             "banner_link": ""
           }
         },
         "banner_block_jKP3n4": {
           "type": "banner_block",
           "settings": {
-            "banner_image": "shopify:\/\/shop_images\/bannar_1_eb15ba83-352a-4f41-8a38-4c4fc9f94245.jpg",
-            "banner_image_sp": "shopify:\/\/shop_images\/bannar_sp.jpg",
+            "banner_image": "shopify:\/\/shop_images\/2480_700.jpg",
+            "banner_image_sp": "shopify:\/\/shop_images\/2480_700.jpg",
             "banner_link": ""
           }
         },
         "banner_block_fbpnk8": {
           "type": "banner_block",
           "settings": {
-            "banner_image": "shopify:\/\/shop_images\/bannar_1_eb15ba83-352a-4f41-8a38-4c4fc9f94245.jpg",
-            "banner_image_sp": "shopify:\/\/shop_images\/bannar_sp.jpg",
+            "banner_image": "shopify:\/\/shop_images\/b00cc2132d6741661af922ba96057e55.jpg",
+            "banner_image_sp": "shopify:\/\/shop_images\/b00cc2132d6741661af922ba96057e55.jpg",
             "banner_link": ""
           }
         }

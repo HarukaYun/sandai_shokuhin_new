@@ -105,7 +105,7 @@ $('.pickup_slide').slick({
 //top 人気商品
 $('.best_slide_pc').slick({
   cssEase: 'linear',//動きの種類は等速に
-  arrows:false,//左右に出る矢印を非表示
+  arrows:true,//左右に出る矢印を表示
   dots:false,
   slidesToShow: 4.5,
   // pauseOnHover: false,//hoverしても止めない
@@ -127,11 +127,6 @@ $('.best_slide_pc').slick({
         }
     }
 ]
-});
-
-// ドラッグ中は自動再生を停止
-$('.best_slide').on('mousedown touchstart', function() {
-  $(this).slick('slickPause');
 });
 
 
